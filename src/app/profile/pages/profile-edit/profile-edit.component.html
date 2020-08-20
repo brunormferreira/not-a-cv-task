@@ -1,0 +1,7 @@
+<ncv-profile-shell>
+  <ncv-profile-form
+    *ngIf="form$ | async as form"
+    [form]="form"
+    (submitted)="onSubmitted($event)"
+  ></ncv-profile-form>
+</ncv-profile-shell>

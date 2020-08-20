@@ -1,0 +1,10 @@
+.sections-wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.label {
+  font-weight: 500;
+  margin-right: 10px;
+}

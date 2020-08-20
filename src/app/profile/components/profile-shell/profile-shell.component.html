@@ -1,0 +1,12 @@
+<mat-progress-bar
+  *ngIf="pending$ | async"
+  mode="indeterminate"
+></mat-progress-bar>
+
+<ng-container *ngIf="data$ | async">
+  <ng-content></ng-content>
+</ng-container>
+
+<div *ngIf="error$ | async" class="alert-danger">
+  Cannot load profile data. Try again later...
+</div>

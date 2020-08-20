@@ -1,0 +1,27 @@
+<div class="sections-wrapper">
+  <ncv-profile-section title="Basic info">
+    <mat-list>
+      <mat-list-item>
+        <span class="label">First name:</span>{{ data.basicInfo.firstName }}
+      </mat-list-item>
+      <mat-list-item>
+        <span class="label">Last name:</span>{{ data.basicInfo.lastName }}
+      </mat-list-item>
+      <mat-list-item>
+        <span class="label">Email:</span>{{ data.basicInfo.email }}
+      </mat-list-item>
+    </mat-list>
+  </ncv-profile-section>
+
+  <ncv-profile-section title="Additional info">
+    <mat-list>
+      <mat-list-item>
+        <span class="label">Base technology:</span
+        >{{ data.additionalInfo.baseTechnology }}
+      </mat-list-item>
+      <mat-list-item *ngIf="data.additionalInfo.superhero as superhero">
+        <span class="label">Favourite superhero:</span>{{ superhero }}
+      </mat-list-item>
+    </mat-list>
+  </ncv-profile-section>
+</div>

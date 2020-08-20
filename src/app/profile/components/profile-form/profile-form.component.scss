@@ -1,0 +1,23 @@
+.sections-wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-control {
+  margin-bottom: 20px;
+  width: 100%;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+
+  *:not(:last-child) {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,56 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="sections-wrapper">
+    <ncv-profile-section title="Basic info" formGroupName="basicInfo">
+      <mat-form-field class="form-control">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngIf="form.get('basicInfo.firstName').hasError('required')">
+          First name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-control">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastName" />
+        <mat-error *ngIf="form.get('basicInfo.lastName').hasError('required')">
+          Last name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-control">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="form.get('basicInfo.email').hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="form.get('basicInfo.email').hasError('email')">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+    </ncv-profile-section>
+
+    <ncv-profile-section title="Additional info" formGroupName="additionalInfo">
+      <mat-form-field class="form-control">
+        <mat-label>Base technology</mat-label>
+        <input matInput formControlName="baseTechnology" />
+        <mat-error
+          *ngIf="form.get('additionalInfo.baseTechnology').hasError('required')"
+        >
+          Last name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-control">
+        <mat-label>Superhero</mat-label>
+        <input matInput formControlName="superhero" />
+      </mat-form-field>
+    </ncv-profile-section>
+  </div>
+
+  <div class="controls">
+    <a mat-raised-button routerLink="..">Cancel</a>
+    <button mat-raised-button color="accent" [disabled]="form.pristine">
+      Update
+    </button>
+  </div>
+</form>

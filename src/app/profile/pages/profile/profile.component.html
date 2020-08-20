@@ -1,0 +1,6 @@
+<ncv-profile-shell>
+  <ng-container *ngIf="data$ | async as data">
+    <ncv-profile-header></ncv-profile-header>
+    <ncv-profile-sections [data]="data"></ncv-profile-sections>
+  </ng-container>
+</ncv-profile-shell>
